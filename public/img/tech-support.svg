@@ -1,0 +1,25 @@
+<svg xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" width="36" height="49" viewBox="0 0 36 49">
+  <defs>
+    <linearGradient id="linear-gradient" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff4495"/>
+      <stop offset="1" stop-color="#ff6d6d"/>
+    </linearGradient>
+    <linearGradient id="linear-gradient-3" x1="0.5" x2="0.5" y2="1" gradientUnits="objectBoundingBox">
+      <stop offset="0" stop-color="#ff6d6d"/>
+      <stop offset="1" stop-color="#ff4495"/>
+    </linearGradient>
+  </defs>
+  <g id="tech-support" transform="translate(-826 -1704)">
+    <g id="Group_515" data-name="Group 515" transform="translate(-309.142 1376.838)">
+      <circle id="Ellipse_460" data-name="Ellipse 460" cx="9" cy="9" r="9" transform="translate(1144.142 327.162)" fill="#ff6d6d"/>
+      <path id="Path_2829" data-name="Path 2829" d="M9,0A9,9,0,1,1,0,9,9,9,0,0,1,9,0Z" transform="translate(1144.142 328.162)" fill="url(#linear-gradient)"/>
+      <path id="Rectangle_161" data-name="Rectangle 161" d="M26.03,0h0A9.97,9.97,0,0,1,36,9.97V28a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V26.03A26.03,26.03,0,0,1,26.03,0Z" transform="translate(1135.142 348.162)" fill="url(#linear-gradient)"/>
+      <path id="Rectangle_162" data-name="Rectangle 162" d="M9.97,0h0A26.03,26.03,0,0,1,36,26.03V28a0,0,0,0,1,0,0H0a0,0,0,0,1,0,0V9.97A9.97,9.97,0,0,1,9.97,0Z" transform="translate(1135.142 348.162)" opacity="0.8" fill="url(#linear-gradient-3)"/>
+    </g>
+    <g id="Group_522" data-name="Group 522">
+      <path id="Rectangle_165" data-name="Rectangle 165" d="M0,0H2A1,1,0,0,1,3,1V4A1,1,0,0,1,2,5H0A0,0,0,0,1,0,5V0A0,0,0,0,1,0,0Z" transform="translate(854 1712)" fill="#ff4495"/>
+      <path id="Path_2822" data-name="Path 2822" d="M7,0s.323,2.915-.646,4.652A5.618,5.618,0,0,1,3.123,6.946" transform="translate(848.5 1716.498)" fill="none" stroke="#ff6d6d" stroke-linecap="round" stroke-width="1"/>
+      <circle id="Ellipse_462" data-name="Ellipse 462" cx="1.25" cy="1.25" r="1.25" transform="translate(850 1722)" fill="#ff4495"/>
+    </g>
+  </g>
+</svg>
