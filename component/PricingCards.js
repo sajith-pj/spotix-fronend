@@ -2,9 +2,23 @@
 import { useState } from 'react';
 import CourseRegistration from './CourseRegistration';
 
-export const PricingCards = ( { courseDetails } ) => {
+export const PricingCards = ( { courseDetails , pageName} ) => {
     const [modal,setModal ] = useState(false)
-    const [cType, setCType] = useState()
+    const [cLevel, setCLevel] = useState()  // cLeve denotes the level of course like intermediate , beginner and professionals
+    const [ cType , setCType ] = useState() // cType denotes type of course like full stack development or uiux
+    const [ cPrice, setCPrice ] = useState() // cPrice means price of curresponding course
+    const registerInfo =( type, price )=>{
+        setModal(true);
+        setCLevel(type);
+        setCPrice( price )
+        if(pageName == "mern-full-stack-development"){
+            setCType("mern-full-stack-development")
+        }
+        if(pageName == "uiux"){
+            setCType("uiux")
+        }
+
+    }
    return (
     <div class="container mx-auto">
     {/* <!-- choose plans section starts here --> */}
@@ -28,7 +42,7 @@ export const PricingCards = ( { courseDetails } ) => {
                     }
                 </ul>
             
-                <button class="register-now-btn text-white mt-4" onClick={()=>{setModal(true); setCType(course.type);}}> Register Now</button>
+                <button class="register-now-btn text-white mt-4" onClick={ ()=> registerInfo( course.type ,course.price ) }> Register Now</button>
           
             </div>
         </div>
@@ -38,7 +52,14 @@ export const PricingCards = ( { courseDetails } ) => {
     </section>
     {/* <!-- choose plans section ends here --> */}
     {modal? 
-     <CourseRegistration modal={modal} setModal= {setModal} cType={cType} setCType={setCType}/>
+     <CourseRegistration 
+     modal={modal} 
+     setModal= {setModal} 
+     cLevel={cLevel} 
+     setCLevel={setCLevel} 
+     cType={cType}
+     cPrice = {cPrice}
+     />
     :null
     }
 </div>

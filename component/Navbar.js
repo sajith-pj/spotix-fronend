@@ -52,9 +52,16 @@ class Navbar extends Component {
               </Link>
             </li>
             <li className="border-none">
-              <Link href="/debugindia">
+              <Link href="/debug-india">
                 <a className="nav-link block md:inline-block px-4 py-3 no-underline text-white hover:text-grey-darker transition ease-linear">
                   Debug India
+                </a>
+              </Link>
+            </li>
+            <li className="border-none">
+              <Link href="/portfolio">
+                <a className="nav-link block md:inline-block px-4 py-3 no-underline text-white hover:text-grey-darker transition ease-linear">
+                  Portfolio
                 </a>
               </Link>
             </li>

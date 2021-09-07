@@ -1,9 +1,53 @@
-import BlackNavbar from "../component/BlackNavbar"
-import Footer from "../component/Footer"
-import PricingCards from "../component/PricingCards"
+import { useState } from "react"
+import BlackNavbar from "../../component/BlackNavbar"
+import Footer from "../../component/Footer"
+import PricingCards from "../../component/PricingCards"
 
 
 const uiux = () => {
+
+  const [courseDetails] = useState(
+
+    [
+      {
+        type:'intermediate',
+        duration:'3',
+        price:"25000",
+        details:[
+          "No. of Projects - 5",
+          "3 classes / week ",
+          "Placement Support",
+          "24 * 7 Support",
+          "Certification on Completion"
+          ]
+      },
+      {
+        type:'beginner',
+        duration:'3',
+        price:"25000",
+        details:[
+          "No. of Projects - 5",
+          "3 classes / week ",
+          "Placement Support",
+          "One To One Tutoring",
+          "24 * 7 Support",
+          "Certification on Completion"
+          ]
+      },
+      {
+        type:'professional',
+        duration:'3',
+        price:"15000",
+        details:[
+          "No. of Projects - 5",
+          "3 classes / week ",
+          "One To One Tutoring",
+          "24 * 7 Support",
+          "Certification on Completion"
+          ]
+      }
+    ]
+  )
     return (
         <>
             <BlackNavbar />
@@ -82,7 +126,7 @@ const uiux = () => {
       </div>
       <img src="img/line.svg" className="line-svg" alt="line" />
     </section>
-    <PricingCards/>
+    <PricingCards courseDetails={courseDetails} pageName = "UIUX Designing"/>
     <Footer/>
         </>
     )

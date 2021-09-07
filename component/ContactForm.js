@@ -1,4 +1,7 @@
+import axios from "axios";
+import { useRouter } from "next/router";
 import { Component } from "react";
+import { Link }  from 'next/link'
 
 const initialState = {
   fullname: "",
@@ -9,6 +12,8 @@ const initialState = {
   messageError:""
 };
 class ContactForm extends Component{
+
+   //router = useRouter()
   state = initialState;
 
   validate = () => {
@@ -48,7 +53,15 @@ class ContactForm extends Component{
     event.preventDefault();
     const isValid = this.validate();
     if (isValid) {
-      this.setState(initialState)
+     // router.push('/maintenance')
+    
+      // axios.post('http://localhost:3005/contact',{ fullname: this.state.fullname ,email: this.state.emailaddress , message:this.state.message}).then( response =>{
+      //   console.log( response )
+      //   if(response.data.messageSend === true){
+      //     alert(" Message Send Out Team will contact you")
+      //   }
+      // })
+      // this.setState(initialState)
     }
   }
     render(){
@@ -62,7 +75,7 @@ class ContactForm extends Component{
               <input
                 type="text" id="Fullname2"
                 name="fullname"
-                className="appearance-none rounded-md w-full py-4 px-3 my-2 shadow-md  focus:outline-none focus:shadow-outline"
+                className="appearance-none rounded-md w-full py-4 px-3 my-2 contact-input-form  focus:outline-none focus:shadow-outline"
                 placeholder="Enter your full name"
                 value={this.state.fullname}
                 onChange={this.handleChange}
@@ -78,7 +91,7 @@ class ContactForm extends Component{
               <input
                 type="text" id="email2"
                 name="emailaddress"
-                className="appearance-none rounded-md  w-full py-4 px-3 my-2 shadow-md  focus:outline-none focus:shadow-outline"
+                className="appearance-none rounded-md  contact-input-form w-full py-4 px-3 my-2  focus:outline-none focus:shadow-outline"
                 placeholder="Enter your Email Address"
                 value={this.state.emailaddress}
                 onChange={this.handleChange}
@@ -92,8 +105,7 @@ class ContactForm extends Component{
                 Message
               </label>
               <textarea id="textarea2"
-                className="appearance-none rounded-md  w-full py-4 px-3 my-2 shadow-md  focus:outline-none focus:shadow-outline"                
-                
+                className="appearance-none rounded-md contact-input-form  w-full py-4 px-3 my-2   focus:outline-none focus:shadow-outline"                
                 cols={30}
                 rows={10}  
                 name="message"
@@ -104,9 +116,11 @@ class ContactForm extends Component{
                 {this.state.messageError}
               </small>
             </div>
+           
             <button className="btn-still w-full xl:text-2xl lg:text-xl text-md font-extrabold py-3  px-6 lg:mt-8 mt-4 text-white rounded-md  shadow-var" type="submit" >
               Send
             </button>
+           
             </form>
          
         )

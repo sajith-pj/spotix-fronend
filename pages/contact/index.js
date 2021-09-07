@@ -1,6 +1,6 @@
 import { Component } from "react";
-import ContactForm from "../component/ContactForm";
-import Social from "../component/SocialIcons";
+import ContactForm from "../../component/ContactForm";
+import Social from "../../component/SocialIcons";
 import Link from "next/link";
 
 class Contact extends Component {
@@ -86,8 +86,8 @@ class Contact extends Component {
           </Link>
         </nav>
 
-        <section>
-          <div className="grid lg:grid-cols-2 grid-cols-1">
+        <section className=" h-screen ">
+          <div className="grid lg:grid-cols-2 grid-cols-1 h-full overflow-hidden ">
             <div className="contact-left lg:block hidden ">
               <div className="contact-l-content text-white">
                 <h6 className="2xl:text-5xl text-3xl font-black text-center mx-auto">
@@ -139,7 +139,7 @@ class Contact extends Component {
                 <Social />
               </div>
             </div>
-            <div className="contact-right 2xl:p-28 xl:p-20 lg:p-16 pt-32 p-10 ">
+            <div className="contact-right 2xl:p-28 xl:p-20 lg:p-16 pt-32 p-10 overflow-auto ">
               <ContactForm />
 
               <div className="social lg:hidden block pt-16">

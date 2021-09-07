@@ -1,7 +1,7 @@
 import { useState } from "react";
-import BlackNavbar from "../component/BlackNavbar";
-import Footer from "../component/Footer";
-import PricingCards from "../component/PricingCards";
+import BlackNavbar from "../../component/BlackNavbar";
+import Footer from "../../component/Footer";
+import PricingCards from "../../component/PricingCards";
 
 const mernStack = () => {
 
@@ -23,7 +23,7 @@ const mernStack = () => {
       {
         type:'beginner',
         duration:'3',
-        price:"25000",
+        price:"35000",
         details:[
           "No. of Projects - 5",
           "3 classes / week ",
@@ -117,7 +117,7 @@ const mernStack = () => {
         </div>
         <img src="img/line.svg" className="line-svg" alt="line" />
       </section>
-      <PricingCards courseDetails={courseDetails} />
+      <PricingCards courseDetails={courseDetails} pageName = "MERN Full Stack Development" />
       <Footer/>
     </>
   );

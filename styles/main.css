@@ -803,7 +803,7 @@ button.react-multiple-carousel__arrow {
     0% no-repeat padding-box;
 }
 
-.register-input-field-bg {
+.contact-input-form , .register-input-field-bg {
   background: #fafafa;
 }
 
@@ -865,6 +865,90 @@ button.react-multiple-carousel__arrow {
 .register-pop-down{
   animation: popdown 1s ease-in-out;
 }
+
+.payment-method{
+  cursor:pointer;
+   width: 25px;
+  height: 25px;
+  position: relative;
+
+}
+
+.payment-method::after{
+  width: 25px;
+        height: 25px;
+        border-radius: 25px;
+        position: absolute;
+        border: 3px solid transparent;
+        background:  white;
+        border: 2px solid #ff4495;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        top:0;
+        left: 0;
+}
+
+.payment-method:checked::after{
+  border-radius: 50%;
+  position: absolute;
+  content: '';
+  display: inline-block;
+  z-index: 10;
+  visibility: visible;
+}
+
+.payment-method::before{
+        top: 3px ;
+        width: 19px ;
+        height: 19px ;
+        left: 3px ;
+        border-radius: 50%;
+        background: white;
+        position: relative;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        z-index: 100;
+}
+
+.payment-method:checked::before{
+  
+        border-radius: 50%;
+        background: #ff6d6d;
+        position: relative;
+        content: '';
+        display: inline-block;
+        visibility: visible;
+        top: 4px ;
+        width: 15px ;
+        height: 15px ;
+       left: 5px ;
+
+}
+
+
+/* Login  Form Styles Start here*/
+.login-container{
+  position: relative;
+  border: 1px solid transparent;
+  border-radius: 16px;
+  background: white;
+  border-image-slice:1;
+  box-shadow: 0px 4px 40px 1px #4e40461e;
+}
+.login-container::after{
+  position: absolute;
+    top: -2px;
+     bottom: -2px;
+    left: -2px; 
+    right: -2px;
+    background:  linear-gradient(-45deg, #ff6d6d, #ff44956c);
+    content: '';
+    z-index: -1;
+    border-radius: 16px;
+}
+/* Login  Form Styles Ends here*/
 
 @keyframes popup{
   0%{
@@ -1030,6 +1114,55 @@ button.react-multiple-carousel__arrow {
     margin: 0px 12px 10px 12px;
   }
 }
+
+/* portfolio page */
+.portfolio-container{
+    background: #FAFAFA;;
+}
+
+
+
+.tab-btn {
+  height: 0px;
+  width: 0px;
+  position: absolute;
+  opacity: 0;
+}
+.tab-btn-label {
+  width: 200px;
+  text-transform: capitalize;
+  padding: 10px 40px;
+  border-radius: 21px;
+  transition: 0.2s;
+}
+
+.tab-btn:checked + .tab-btn-label {
+  background: transparent linear-gradient(178deg, #ff6d6d 0%, #ff4495 100%) 0%
+    0% no-repeat padding-box;
+  color: white;
+  font-weight: 600;
+  box-shadow: 0px 3px 6px #00000029;
+}
+/* portfolio page */
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 /* media queries media queries for mern full stack development page */
 

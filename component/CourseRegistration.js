@@ -1,10 +1,25 @@
 
 import Link from 'next/link';
-import { useEffect, useRef, useState } from 'react';
+import { useEffect, useState } from 'react';
 import CourseRegistrationForm from './CourseRegistrationForm'
- const CourseRegistration = ( { setModal , cType ,setCType} ) => {
-     const [ successAlert, setSuccessAlert] = useState( false )
-     const regitserPopUp = useRef()
+import AlertBox from './AlertBox';
+ const CourseRegistration = ( { setModal , cLevel ,setCLevel,cType , cPrice} ) => {
+     const [ alert, setAlert] = useState( {
+         status:false,
+         message:"",
+         registered: null,
+         isValid:null
+     })
+     const [ success , setSuccess ] = useState(null)
+
+     useEffect( ()=>{
+        if( alert == true ){
+            setSuccess( true )
+        }
+        if( alert == false ){
+            setSuccess( false )
+        }
+     },[success])
     return (
         <div className=" fixed top-0 left-0 w-full z-10 bg-white register-popup"  >
         <nav className="nav w-full fixed bg-transparent d-nav top-0 md:px-10 px-2 md:py-3 py-2">
@@ -28,10 +43,17 @@ import CourseRegistrationForm from './CourseRegistrationForm'
                  </div>
                 </div>
             </div>
-            <CourseRegistrationForm setModalFunction={setModal} cType={cType} setCType={setCType} setSuccessAlert={setSuccessAlert} />
+            <CourseRegistrationForm 
+            setModalFunction={setModal} 
+            cLevel={cLevel} 
+            setCLevel={setCLevel} 
+            cType={cType} 
+            setAlert={setAlert} 
+            cPrice={cPrice}
+            />
         </div>
     </section>
-        { successAlert ? alert("Successfully Registered"):null }
+        { alert.status ? <AlertBox  alert={alert} setAlert={setAlert} /> :  null }
     </div>
     )
 }
